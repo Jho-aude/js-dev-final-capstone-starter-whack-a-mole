@@ -10,7 +10,7 @@ let timer;
 let lastHole = 0;
 let points = 0;
 let difficulty = "hard";
-debugger;
+
 /**
  * Generates a random integer within a range.
  *
