@@ -6,7 +6,7 @@ const score = document.querySelector('.score');; // Use querySelector() to get t
 const timerDisplay = document.querySelector('.timer');; // use querySelector() to get the timer element.
 
 let time = 0;
-let timer;
+let timer = 0;
 let lastHole = 0;
 let points = 0;
 let difficulty = "hard";
