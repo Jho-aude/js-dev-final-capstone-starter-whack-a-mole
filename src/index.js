@@ -103,7 +103,7 @@ function gameOver() {
     return timeoutId;
   } else {
     let gameStopped = stopGame();
-    return gameStopped;
+    return "game stopped";
   }
 }
 
@@ -267,7 +267,7 @@ function stopGame() {
  *
  */
 function startGame() {
-  setDuration(10);
+  setDuration(25);
   showUp();
   setEventListeners();
   startTimer();
