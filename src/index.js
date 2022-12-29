@@ -221,8 +221,7 @@ function startTimer() {
  *
  */
 function whack(event) {
-  if (timer > 0){return "ouch"};
-  
+
   updateScore();
   
 }
