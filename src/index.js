@@ -2,8 +2,8 @@ const holes = document.querySelectorAll(".hole");
 const moles = document.querySelectorAll(".mole");
 const startButton = document.querySelector("#start");
 // TODO: Add the missing query selectors:
-const score = document.querySelector(".score"); // Use querySelector() to get the score element
-const timerDisplay = document.querySelector(".timerDisplay"); // use querySelector() to get the timer element.
+const score = document.querySelector("#score"); // Use querySelector() to get the score element
+const timerDisplay = document.querySelector("#timer"); // use querySelector() to get the timer element.
 
 let time = 0;
 let timer;
@@ -167,7 +167,7 @@ function toggleVisibility(hole) {
 function updateScore() {
   // TODO: Write your code here
   points++;
-  score.textContent = "points";
+  score.textContent = points;
   return points;
 }
 
@@ -221,11 +221,8 @@ function startTimer() {
  *
  */
 function whack(event) {
-  // TODO: Write your code here.
   updateScore();
-  return points;
 }
-
 /**
  *
  * Adds the 'click' event listeners to the moles. See the instructions
@@ -234,11 +231,12 @@ function whack(event) {
 function setEventListeners() {
   // TODO: Write your code here
 
-  moles.forEach((mole) => mole.addEventListener("click", whack(event));
+  moles.forEach((mole) => mole.addEventListener("click", whack));
 
   return moles;
 }
 
+setEventListeners();
 /**
  *
  * This function sets the duration of the game. The time limit, in seconds,
