@@ -69,7 +69,7 @@ function setDelay(difficulty) {
 
 function chooseHole(holes) {
   const x = randomInteger(0, 8);
-  const hole = holes[x];
+  let hole = holes[x];
   if (hole === lastHole) {
     return chooseHole(holes);
   }
@@ -118,7 +118,7 @@ function gameOver() {
  */
 function showUp() {
   let delay = setDelay(difficulty);
-  const hole = chooseHole();
+  let hole = chooseHole();
   return showAndHide(hole, delay);
 }
 
@@ -150,7 +150,7 @@ function showAndHide(hole, delay) {
  */
 function toggleVisibility(hole) {
   // TODO: add hole.classList.toggle so that it adds or removes the 'show' class.
-  hole.classList.toggle("show");
+  hole.classList.toggle();
   return hole;
 }
 
