@@ -67,16 +67,16 @@ function setDelay(difficulty) {
  * chooseHole(holes) //> returns one of the 9 holes that you defined
  */
 
+
 function chooseHole(holes) {
   const x = randomInteger(0, 8);
   const hole = holes[x];
   if (hole === lastHole) {
-   return chooseHole(holes);
+    return chooseHole(holes);
   }
   lastHole = hole;
   return hole;
 }
-
 /**
  *
  * Calls the showUp function if time > 0 and stops the game if time = 0.
