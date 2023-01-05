@@ -268,9 +268,9 @@ function stopGame() {
  *
  */
 function startGame(){
-  // setDuration(10);
-  // showUp();
-  // return "game started";
+setDuration(10);
+showUp();
+return "game started";
 }
 
 startButton.addEventListener("click", startGame);
