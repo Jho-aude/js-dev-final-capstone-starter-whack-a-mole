@@ -220,7 +220,7 @@ function startTimer() {
  * the moles.
  *
  */
-function whack() {
+function whack(event) {
   updateScore();
   return points;
 }
