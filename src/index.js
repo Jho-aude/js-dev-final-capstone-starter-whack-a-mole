@@ -150,7 +150,7 @@ function showAndHide(hole, delay) {
  */
 function toggleVisibility(hole) {
   // TODO: add hole.classList.toggle so that it adds or removes the 'show' class.
-  hole.classList.toggle();
+  hole.classList.toggle("show");
   return hole;
 }
 
@@ -237,7 +237,7 @@ function setEventListeners() {
   return moles;
 }
 
-setEventListeners();
+
 /**
  *
  * This function sets the duration of the game. The time limit, in seconds,
