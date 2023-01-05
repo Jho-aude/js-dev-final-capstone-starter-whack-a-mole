@@ -117,8 +117,8 @@ function gameOver() {
  *
  */
 function showUp() {
-  let delay = setDelay(difficulty);
-  const hole = chooseHole(holes);
+  let delay = setDelay();
+  const hole = chooseHole();
   return showAndHide(hole, delay);
 }
 
@@ -134,7 +134,7 @@ function showAndHide(hole, delay) {
   // TODO: call the toggleVisibility function so that it adds the 'show' class.
   toggleVisibility(hole);
 
-  const timeoutID = setTimeout((delay) => {
+  const timeoutID = setTimeout(toggleVisibilityy(hole),(delay) => {
     // TODO: call the toggleVisibility function so that it removes the 'show' class when the timer times out.
 
     gameOver();
