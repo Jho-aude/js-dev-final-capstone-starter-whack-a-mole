@@ -267,12 +267,10 @@ function stopGame() {
  * is clicked.
  *
  */
-function startGame() {
-  setDuration(15);
-  showUp();
-  setEventListeners();
-  startTimer();
-  return "game started";
+function startGame(){
+  // setDuration(10);
+  // showUp();
+  // return "game started";
 }
 
 startButton.addEventListener("click", startGame);
