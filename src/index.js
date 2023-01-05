@@ -9,7 +9,7 @@ let time = 0;
 let timer;
 let lastHole = 0;
 let points = 0;
-let difficulty = "hard";
+let difficulty = "normal";
 
 /**
  * Generates a random integer within a range.
@@ -117,7 +117,7 @@ function gameOver() {
  *
  */
 function showUp() {
-  let delay = setDelay();
+  let delay = setDelay(difficulty);
   const hole = chooseHole();
   return showAndHide(hole, delay);
 }
