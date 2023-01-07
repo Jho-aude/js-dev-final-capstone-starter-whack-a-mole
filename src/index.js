@@ -134,11 +134,11 @@ function showAndHide(hole, delay) {
   // TODO: call the toggleVisibility function so that it adds the 'show' class.
   toggleVisibility(hole);
 
-  const timeoutID = setTimeout((delay) => {
+  const timeoutID = setTimeout(() => {
     // TODO: call the toggleVisibility function so that it removes the 'show' class when the timer times out.
 toggleVisibility(hole);
     gameOver();
-  }, 0); // TODO: change the setTimeout delay to the one provided as a parameter
+  }, delay); // TODO: change the setTimeout delay to the one provided as a parameter
   return timeoutID;
 }
 
@@ -150,7 +150,7 @@ toggleVisibility(hole);
  */
 function toggleVisibility(hole) {
   // TODO: add hole.classList.toggle so that it adds or removes the 'show' class.
-  hole.classList.toggle("show");
+  hole.classList.toggle('show');
   return hole;
 }
 
