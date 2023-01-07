@@ -237,7 +237,7 @@ function setEventListeners() {
   return moles;
 }
 
-setEventListeners();
+
 /**
  *
  * This function sets the duration of the game. The time limit, in seconds,
@@ -277,6 +277,7 @@ function startGame() {
 
 startButton.addEventListener("click", startGame);
 
+setEventListeners();
 // Please do not modify the code below.
 // Used for testing purposes.
 window.randomInteger = randomInteger;
