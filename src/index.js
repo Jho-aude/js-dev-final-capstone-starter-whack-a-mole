@@ -9,7 +9,7 @@ let time = 0;
 let timer;
 let lastHole = 0;
 let points = 0;
-let difficulty = "normal";
+let difficulty = "hard";
 
 /**
  * Generates a random integer within a range.
@@ -67,7 +67,6 @@ function setDelay(difficulty) {
  * chooseHole(holes) //> returns one of the 9 holes that you defined
  */
 
-
 function chooseHole(holes) {
   const x = randomInteger(0, 8);
   const hole = holes[x];
@@ -77,6 +76,7 @@ function chooseHole(holes) {
   lastHole = hole;
   return hole;
 }
+
 /**
  *
  * Calls the showUp function if time > 0 and stops the game if time = 0.
@@ -103,7 +103,7 @@ function gameOver() {
     return timeoutId;
   } else {
     let gameStopped = stopGame();
-    return "game stopped";
+    return gameStopped;
   }
 }
 
@@ -118,7 +118,7 @@ function gameOver() {
  */
 function showUp() {
   let delay = setDelay(difficulty);
-  let hole = chooseHole();
+  const hole = chooseHole(holes);
   return showAndHide(hole, delay);
 }
 
@@ -134,7 +134,7 @@ function showAndHide(hole, delay) {
   // TODO: call the toggleVisibility function so that it adds the 'show' class.
   toggleVisibility(hole);
 
-  const timeoutID = setTimeout(toggleVisibilityy(hole),(delay) => {
+  const timeoutID = setTimeout((delay) => {
     // TODO: call the toggleVisibility function so that it removes the 'show' class when the timer times out.
 
     gameOver();
@@ -150,7 +150,7 @@ function showAndHide(hole, delay) {
  */
 function toggleVisibility(hole) {
   // TODO: add hole.classList.toggle so that it adds or removes the 'show' class.
-  hole.classList.toggle();
+  hole.classList.toggle("show");
   return hole;
 }
 
@@ -166,7 +166,7 @@ function toggleVisibility(hole) {
  */
 function updateScore() {
   // TODO: Write your code here
-  points++;
+ points = points +1;
   score.textContent = points;
   return points;
 }
@@ -237,7 +237,7 @@ function setEventListeners() {
   return moles;
 }
 
-
+setEventListeners();
 /**
  *
  * This function sets the duration of the game. The time limit, in seconds,
@@ -267,10 +267,12 @@ function stopGame() {
  * is clicked.
  *
  */
-function startGame(){
-setDuration(10);
-showUp();
-return "game started";
+function startGame() {
+  setDuration(10);
+  showUp();
+  setEventListeners();
+  startTimer();
+  return "game started";
 }
 
 startButton.addEventListener("click", startGame);
