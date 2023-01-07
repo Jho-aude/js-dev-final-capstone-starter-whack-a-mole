@@ -136,7 +136,7 @@ function showAndHide(hole, delay) {
 
   const timeoutID = setTimeout((delay) => {
     // TODO: call the toggleVisibility function so that it removes the 'show' class when the timer times out.
-
+toggleVisibility(hole);
     gameOver();
   }, 0); // TODO: change the setTimeout delay to the one provided as a parameter
   return timeoutID;
